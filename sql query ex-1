@@ -120,5 +120,19 @@ FROM dept d
 JOIN emp e ON d.deptno = e.deptno
 GROUP BY d.deptno, d.dname, d.loc;
 
+select e.ename,e.empno,d.deptno,d.loc
+from emp e join dept d on e.deptno=d.deptno;
 
+select  d.dname
+from dept d 
+where d.deptno not in (select distinct deptno from emp);
+
+select  d.dname
+from dept d 
+where d.deptno in (select distinct deptno from emp);
+
+
+select ename
+from emp
+where empno not in (select distinct mgr from emp);
 
