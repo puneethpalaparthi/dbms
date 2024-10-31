@@ -136,3 +136,4 @@ select ename
 from emp
 where empno not in (select distinct mgr from emp);
 
+
